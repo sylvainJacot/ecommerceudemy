@@ -1,11 +1,11 @@
 import React from "react";
-import Styled from "styled-components";
+import {HomePageNavigation} from "../Organisms/HomePageNavigation/homepagenavigation";
 
 export class HomePage extends React.Component {
     render() {
         return (
             <>
-                HomePage
+                <HomePageNavigation/>
             </>
         )
     }
