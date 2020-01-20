@@ -9,7 +9,7 @@ export const homePageNavigationData = [
         title:"Apparels",
         href:"/",
         itemBig: true,
-        bgimg:NavPic01,
+        bgimg:NavPic05,
     },
     {
         title:"Accessories",
@@ -21,19 +21,19 @@ export const homePageNavigationData = [
         title:"Others",
         href:"/",
         itemBig: false,
-        bgimg:NavPic03,
+        bgimg:NavPic01,
     },
     {
         title:"Shop by Collection",
         href:"/",
         itemBig: false,
-        bgimg:NavPic04,
+        bgimg:NavPic03,
     },
     {
         title:"Shop by Techniques",
         href:"/",
         itemBig: false,
-        bgimg:NavPic05,
+        bgimg:NavPic04,
     },
 
 ]
