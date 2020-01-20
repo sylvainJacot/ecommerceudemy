@@ -1,7 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
 import {homePageNavigationData} from "../../Assets/constant/HomePageNavigationData";
-import RandomPic from "../../Assets/img/element5-digital-ooPx1bxmTc4-unsplash.jpg";
 
 
 const HomePageNavigationItemBox = Styled.div`
@@ -15,7 +14,7 @@ const HomePageNavigationItemBox = Styled.div`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   background-color:red;
-  background: url(${RandomPic}) no-repeat center;
+  background: url(${props => props.BgImg}) no-repeat center;
   background-size: cover;
 
 `;
@@ -48,7 +47,7 @@ export class HomePageNavigationItem extends React.Component {
         return (
             <>
             {homePageNavigationData.map((HomePageNavigationDataItem,id) =>
-            <HomePageNavigationItemBox key={id} ItemBig={HomePageNavigationDataItem.itemBig}>
+            <HomePageNavigationItemBox key={id} ItemBig={HomePageNavigationDataItem.itemBig} BgImg={HomePageNavigationDataItem.bgimg}>
                 <HomePageNavigationItemContent>
                     <h1>
                         {HomePageNavigationDataItem.title}
