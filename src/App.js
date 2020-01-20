@@ -4,9 +4,9 @@ import {HomePage} from "./components/Pages/homepage";
 
 function App() {
   return (
-    <div className="App">
-     <HomePage/>
-    </div>
+        <div className="App">
+         <HomePage/>
+        </div>
   );
 }
 
