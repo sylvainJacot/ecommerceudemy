@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
-import {HomePageNavigationItem} from "./homepagenavigationitem";
+import {HomePageNavigationItemWithRouter} from "../HomePageNavigation/homepagenavigationitem";
+
 
 const HomePageNavigationBox = Styled.div`
   width: 100%;
@@ -15,9 +16,10 @@ export class HomePageNavigation extends React.Component {
         return (
             <HomePageNavigationBox>
 
-                    <HomePageNavigationItem/>
+                    <HomePageNavigationItemWithRouter />
 
             </HomePageNavigationBox>
         )
     }
 }
+

@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
-import {ColorRoles} from '../../Atoms/variables';
+import {withRouter} from "react-router-dom";
+import {ColorRoles} from "../../Atoms/variables";
 import {homePageNavigationData} from "../../Assets/constant/HomePageNavigationData";
 
 
@@ -58,25 +59,35 @@ const HomePageNavigationItemContent = Styled.div`
 `;
 
 
-
-export class HomePageNavigationItem extends React.Component {
+class HomePageNavigationItem extends React.Component {
     render() {
+        const {match,history} = this.props;
         return (
             <>
-            {homePageNavigationData.map((HomePageNavigationDataItem,id) =>
-            <HomePageNavigationItemBox key={id} ItemBig={HomePageNavigationDataItem.itemBig}>
-                <HomePageNavigationItemContent>
-                    <h1>
-                        {HomePageNavigationDataItem.title.toUpperCase()}
-                    </h1>
-                    <button>
-                        Shop Now
-                    </button>
-                </HomePageNavigationItemContent>
-                <BackgroundImage BgImg={HomePageNavigationDataItem.bgimg}></BackgroundImage>
-            </HomePageNavigationItemBox>
+                {homePageNavigationData.map((HomePageNavigationDataItem,id) =>
+                    <HomePageNavigationItemBox
+                        key={id}
+                        ItemBig={HomePageNavigationDataItem.itemBig}
+                        onClick={() => history.push(`${match.url}${HomePageNavigationDataItem.linkUrl}`)}
+                    >
+                        <HomePageNavigationItemContent>
+                            <h1>
+                                {HomePageNavigationDataItem.title.toUpperCase()}
+                            </h1>
+                            <button>
+                                Shop Now
+                            </button>
+                        </HomePageNavigationItemContent>
+                        <BackgroundImage BgImg={HomePageNavigationDataItem.bgimg}></BackgroundImage>
+                    </HomePageNavigationItemBox>
                 )}
-                </>
+            </>
         )
     }
 }
+
+
+export const HomePageNavigationItemWithRouter = withRouter(HomePageNavigationItem);
+
+
+

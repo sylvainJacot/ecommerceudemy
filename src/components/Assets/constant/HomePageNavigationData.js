@@ -7,33 +7,33 @@ import NavPic05 from "../img/sharon-garcia-pkUH647RogQ-unsplash.jpg";
 export const homePageNavigationData = [
     {
         title:"Apparels",
-        href:"/",
         itemBig: true,
         bgimg:NavPic05,
+        linkUrl: 'apparels',
     },
     {
         title:"Accessories",
-        href:"/",
         itemBig: true,
         bgimg:NavPic02,
+        linkUrl: 'accessories',
     },
     {
         title:"Others",
-        href:"/",
         itemBig: false,
         bgimg:NavPic01,
+        linkUrl: 'others',
     },
     {
         title:"Shop by Collection",
-        href:"/",
         itemBig: false,
         bgimg:NavPic03,
+        linkUrl: 'shopbycollection',
     },
     {
         title:"Shop by Techniques",
-        href:"/",
         itemBig: false,
         bgimg:NavPic04,
+        linkUrl: 'shopbytechniques',
     },
 
 ]
