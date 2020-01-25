@@ -13,13 +13,13 @@ export const homePageNavigationData = [
         linkUrl: 'apparels',
         items: [
             {
-                name: 'ArticleTest',
+                name: 'ArticleTest1',
                 itemimg:TestImg ,
                 price: 22,
                 new: false,
             },
             {
-                name: 'ArticleTest',
+                name: 'ArticleTest1',
                 itemimg:TestImg ,
                 price: 5647,
                 new: false,
@@ -81,13 +81,13 @@ export const homePageNavigationData = [
         linkUrl: 'accessories',
         items: [
             {
-                name: 'ArticleTest',
+                name: 'ArticleTest2',
                 itemimg:TestImg ,
                 price: 22,
                 new: false,
             },
             {
-                name: 'ArticleTest',
+                name: 'ArticleTest2',
                 itemimg:TestImg ,
                 price: 22,
                 new: false,
