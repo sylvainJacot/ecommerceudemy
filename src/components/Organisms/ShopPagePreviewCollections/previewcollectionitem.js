@@ -4,7 +4,6 @@ import {CollectionItem} from './collectionitem';
 
 const PreviewCollectionItemWrapper = styled.div`
 display: flex;
-justify-content: space-between;
 `;
 
 export class PreviewCollectionItem extends React.Component {
