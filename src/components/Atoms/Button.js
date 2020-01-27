@@ -11,7 +11,7 @@ cursor: pointer;
 transition: all 0.1s ;
 
   &:hover {
-  background-color: ${ColorRoles.white}90;
+  background-color: ${ColorRoles.white};
   color: ${ColorRoles.primary};
   transition: all 0.2s ;
   }
