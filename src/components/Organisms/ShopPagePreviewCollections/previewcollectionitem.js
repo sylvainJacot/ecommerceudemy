@@ -4,6 +4,7 @@ import {CollectionItem} from './collectionitem';
 
 const PreviewCollectionItemWrapper = styled.div`
 display: flex;
+flex-wrap: wrap;
 `;
 
 export class PreviewCollectionItem extends React.Component {
