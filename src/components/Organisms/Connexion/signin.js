@@ -1,48 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import {ColorRoles} from "../../Atoms/variables";
 import {FormInput} from "../../Molecules/formInput";
+import PropTypes from 'prop-types';
 
 const SignInWrapper = styled.div`
+display: flex;
+flex-direction: column;
  h2 {
  font-size: 32px;
  margin-bottom: 16px;
  }
 `;
 
-const InputStyling = styled.input`
-    background: none;
-    background-color: white;
-    color: ${ColorRoles.primary};
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid ${ColorRoles.primary};
-    margin: 25px 0;
-
-    &:focus {
-      outline: none;
-    }
-
-`;
-
-const InputWrapper = styled.div`
-position: relative;
-`;
-
-const LabelStyling = styled.label`
-    color: ${ColorRoles.primary};
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 300ms ease all;
-`;
 
 export class SignIn extends React.Component {
     constructor(props) {
@@ -61,9 +30,9 @@ export class SignIn extends React.Component {
     };
 
     handleChange = event => {
-        /* Pull the value and name*/
+        /* Pull the value and name */
         const {value,name} = event.target;
-        /* If name is password, it will say password and point the value typed in */
+        /* If name is password, it will say password and will point the value typed in */
         this.setState({[name]:value})
     }
 
@@ -77,13 +46,23 @@ export class SignIn extends React.Component {
 
                     <form onSubmit={this.handleSubmit}>
 
-                        <FormInput type={"email"} name="email" label={"Your Email"}
-                                   value={this.state.email} handleChange={this.handleChange}required onChange={this.handleChange}>
-                        </FormInput>
+                        <FormInput type="email"
+                                   name="email"
+                                   label="Your Email"
+                                   value={this.state.email}
+                                   inputHasValue={this.state.email.length > 0}
+                                   handleChange={this.handleChange}
+                                   onChange={this.handleChange}
+                        />
 
-                        <FormInput type={"password"} name="password" label={"Your password"}
-                                   value={this.state.password} handleChange={this.handleChange}required onChange={this.handleChange}>
-                        </FormInput>
+                        <FormInput type="password"
+                                   name="password"
+                                   label="Your password"
+                                   value={this.state.password}
+                                   inputHasValue={this.state.password.length > 0}
+                                   handleChange={this.handleChange}
+                                   onChange={this.handleChange}
+                        />
 
                         <input type={"submit"} value={"submit form"}/>
                     </form>
