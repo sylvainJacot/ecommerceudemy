@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {FormInput} from "../../Molecules/formInput";
 import {Button} from "../../Atoms/Button";
+import {signInWithGoogle} from "../../../firebase/firebase.utils";
 
 
 const SignInWrapper = styled.div`
@@ -69,6 +70,7 @@ export class SignIn extends React.Component {
                         />
 
                         <Button type="submit">Submit</Button>
+                        <Button onClick={signInWithGoogle()}>Sign in with Google</Button>
 
                     </form>
                 </SignInWrapper>
