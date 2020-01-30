@@ -11,15 +11,16 @@ cursor: pointer;
 transition: all 0.1s ;
 
   &:hover {
-  background-color: ${ColorRoles.white}90;
+  background-color: ${ColorRoles.white};
   color: ${ColorRoles.primary};
   transition: all 0.2s ;
+  box-shadow: inset 0px 0px 0px 1px ${ColorRoles.primary};
   }
 
 `;
 
-export const Button = (props) => (
-    <ButtonStyle onClick={props.onCLick} type={props.type} fullwidth={props.fullwidth}>
-        {props.label}
+export const Button = ({children, fullwidth, ...otherProps}) => (
+    <ButtonStyle fullwidth={fullwidth} {...otherProps}>
+        {children}
     </ButtonStyle>
 )

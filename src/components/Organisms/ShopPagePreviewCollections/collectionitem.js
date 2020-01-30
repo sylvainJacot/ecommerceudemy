@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import {Button} from "../../Atoms/Button";
+import {ColorRoles} from '../../Atoms/variables';
 
 const ButtonPosition = styled.div`
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: 16px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;
@@ -14,18 +15,15 @@ const ButtonPosition = styled.div`
 
 const CollectionItemWrapper = styled.div`
   position: relative;
-  width: 288px;
-  background-color: #b3d4fc;
-  margin-left: 80px;
-  background-color: green;
+  width: 272px;
+  border: solid lightgrey 1px ;
+  padding: 8px;
+  margin-top: 16px;
   
-  &:nth-child(1) {
-  margin-left: 0;
-  }
-  &:hover ${ButtonPosition} {
+  :hover ${ButtonPosition} {
   opacity: 100%;
   visibility: visible;
-  transition: all 0.2s;
+  transition: all 0.2s;  
   }
 `;
 
@@ -41,17 +39,15 @@ justify-content: center;
   img {
   height: 100%;
   width: auto;
-  border: 1px solid red;
   }
 `;
 
 const Footer = styled.div`
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
 `;
 
 export class CollectionItem extends React.Component {
