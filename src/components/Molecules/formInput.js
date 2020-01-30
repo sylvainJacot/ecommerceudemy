@@ -23,8 +23,9 @@ const InputStyling = styled.input`
 `;
 const LabelStyling = styled.label`
 position: absolute;
-top: ${props => props.inputHasValue ? '12px' : '50%'};
-font-size: ${props => props.inputHasValue ? 12 : 16}px;
+top: ${props => props.inputValueActive ? '12px' : '50%'};
+font-size: ${props => props.inputValueActive ? 12 : 16}px;
+opacity: ${props => props.inputValueActive ? .5 : 1};
 left: 8px;
 transform: translate(0,-50%);
 transition: all 0.1s ease-in-out;
@@ -33,21 +34,22 @@ pointer-events: none;
 `;
 const InputWrapper = styled.div`
 position: relative;
- margin-bottom: 16px;
+margin-bottom: 16px;
 
 ${InputStyling}:focus ~ ${LabelStyling} {
 font-size: 12px;
 top: 12px;
+opacity: .5;
 transition: all 0.1s ease-in-out;
 }
 `;
 
-export const FormInput = ({handleChange,label, inputHasValue, ...otherProps}) => (
+export const FormInput = ({handleChange,label, inputValueActive, ...otherProps}) => (
 
          <InputWrapper>
                 <InputStyling onChange={handleChange} {...otherProps}/>
                 {label ?
-                 <LabelStyling inputHasValue={inputHasValue}>{label}</LabelStyling>
+                 <LabelStyling inputValueActive={inputValueActive}>{label}</LabelStyling>
                     : null
                 }
          </InputWrapper>

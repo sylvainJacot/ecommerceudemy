@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import {FormInput} from "../../Molecules/formInput";
-import PropTypes from 'prop-types';
+import {Button} from "../../Atoms/Button";
+
 
 const SignInWrapper = styled.div`
 display: flex;
 flex-direction: column;
  h2 {
  font-size: 32px;
+ margin-bottom: 8px;
+ }
+ span {
  margin-bottom: 16px;
  }
 `;
@@ -50,7 +54,7 @@ export class SignIn extends React.Component {
                                    name="email"
                                    label="Your Email"
                                    value={this.state.email}
-                                   inputHasValue={this.state.email.length > 0}
+                                   inputValueActive={this.state.email.length > 0}
                                    handleChange={this.handleChange}
                                    onChange={this.handleChange}
                         />
@@ -59,12 +63,13 @@ export class SignIn extends React.Component {
                                    name="password"
                                    label="Your password"
                                    value={this.state.password}
-                                   inputHasValue={this.state.password.length > 0}
+                                   inputValueActive={this.state.password.length > 0}
                                    handleChange={this.handleChange}
                                    onChange={this.handleChange}
                         />
 
-                        <input type={"submit"} value={"submit form"}/>
+                        <Button type="submit">Submit</Button>
+
                     </form>
                 </SignInWrapper>
             </>
