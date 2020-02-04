@@ -69,8 +69,20 @@ export class SignIn extends React.Component {
                                    onChange={this.handleChange}
                         />
 
-                        <Button type="submit">Submit</Button>
-                        <Button onClick={signInWithGoogle()}>Sign in with Google</Button>
+                        <Button
+                            btnVariant="primary"
+                            type="submit"
+                        >Submit</Button>
+                        <Button
+                            btnVariant="google"
+                            onClick={signInWithGoogle()}
+                        >
+                            Sign in with Google
+                        </Button>
+                        <Button
+                            btnVariant="disabled"
+                        >
+                        </Button>
 
                     </form>
                 </SignInWrapper>

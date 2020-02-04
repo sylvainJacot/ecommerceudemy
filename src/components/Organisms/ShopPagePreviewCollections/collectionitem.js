@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Button} from "../../Atoms/Button";
-import {ColorRoles} from '../../Atoms/variables';
+import {colorRoles} from '../../Atoms/variables';
 
 const ButtonPosition = styled.div`
   position: absolute;

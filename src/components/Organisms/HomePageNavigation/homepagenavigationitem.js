@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import {withRouter} from "react-router-dom";
-import {ColorRoles} from "../../Atoms/variables";
+import {colorRoles} from "../../Atoms/variables";
 import {homePageNavigationData} from "../../Assets/constant/HomePageNavigationData";
 
 
@@ -43,13 +43,13 @@ const HomePageNavigationItemContent = Styled.div`
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    background-color: ${ColorRoles.white}80;
+    background-color: ${colorRoles.white}80;
 
     h1 {
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
-      color: ${ColorRoles.primary};
+      color: ${colorRoles.primary};
     }
     button {
       font-weight: lighter;

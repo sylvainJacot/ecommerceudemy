@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {ColorRoles} from "../Atoms/variables";
+import {colorRoles} from "../Atoms/variables";
 
 const InputStyling = styled.input`
   position: relative;
@@ -8,7 +8,7 @@ const InputStyling = styled.input`
   height: 48px;
   border-radius: 4px;
   position: relative;
-  background-color: ${ColorRoles.white};
+  background-color: ${colorRoles.white};
   transition: 0.3s all;
   padding-left: 8px;
 
@@ -16,7 +16,7 @@ const InputStyling = styled.input`
       outline: none;
     }
     &:hover {
-        background-color: ${ColorRoles.white}45;
+        background-color: ${colorRoles.white}45;
       box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
     }
 

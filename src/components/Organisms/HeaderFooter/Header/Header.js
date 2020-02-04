@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom"
 import styled from "styled-components"
 import {ReactComponent as Logo} from "../../../Atoms/media/matter-logo.svg";
-import {ColorRoles} from "../../../Atoms/variables";
+import {colorRoles} from "../../../Atoms/variables";
 
 const LinkStyling = styled(Link)`
 `;
@@ -17,7 +17,7 @@ justify-content: space-between;
   ${LinkStyling} {
    margin-left: 16px;
    text-decoration: none;
-   color: ${ColorRoles.primary};
+   color: ${colorRoles.primary};
    text-transform: uppercase;
   }
   }
